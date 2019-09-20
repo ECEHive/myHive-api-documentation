@@ -50,11 +50,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "properties": {
-                  "": {
-                    "type": "string"
-                  }
-                }
+                "properties": {}
               },
               "examples": {}
             }
