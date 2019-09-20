@@ -1,0 +1,78 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "User",
+    "version": "1.0",
+    "description": "User Related Queries"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:9000",
+      "description": "LOCALTEST"
+    }
+  ],
+  "paths": {
+    "/user/find/{pageSize}/{page}": {
+      "get": {
+        "summary": "Find User",
+        "tags": [],
+        "responses": {}
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "integer"
+          },
+          "name": "pageSize",
+          "in": "path",
+          "required": true,
+          "description": ""
+        },
+        {
+          "schema": {
+            "type": "integer"
+          },
+          "name": "page",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "post": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "description": "",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "": {
+                    "type": "string"
+                  }
+                }
+              },
+              "examples": {}
+            }
+          },
+          "description": ""
+        },
+        "parameters": []
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "token": {
+        "name": "Authorization",
+        "type": "apiKey",
+        "in": "header",
+        "description": "Special Authorization Token"
+      }
+    }
+  }
+}

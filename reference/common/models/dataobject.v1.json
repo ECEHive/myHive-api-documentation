@@ -1,0 +1,37 @@
+{
+  "title": "DataObject",
+  "type": "object",
+  "x-examples": {
+    "/user/find returns": {
+      "value": {
+        "code": "SUCCESS",
+        "time": 1568942143,
+        "data": [],
+        "pagination": {
+          "totalItems": 0,
+          "currentPage": 0,
+          "totalPages": 1,
+          "pageSize": 20
+        }
+      }
+    }
+  },
+  "description": "Standard Object, most if not all API will return this object both on success and error",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "Status Code (Not to be confused with HttpStatus)"
+    },
+    "time": {
+      "type": "integer",
+      "description": "Unix Timestamp. Generated at the time of process."
+    },
+    "data": {
+      "type": "object",
+      "description": "The data that the API returns"
+    },
+    "pagination": {
+      "$ref": "./pagination.v1.json"
+    }
+  }
+}
